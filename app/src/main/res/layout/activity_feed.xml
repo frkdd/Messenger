@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:backgroundTint="#E8E8E8"
+    tools:context=".FeedActivity"
+    android:id="@+id/feedActivity">
+
+
+    <Toolbar
+        android:id="@+id/myFeedToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="165dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start"
+            android:scaleX="1.5"
+            android:scaleY="1.6"
+            android:scrollX="7.5dp"
+            android:scrollY="-3.5dp"
+            android:src="@drawable/messenger"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <Button
+            android:id="@+id/availableButton"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/teal_200"
+            android:drawableLeft="@drawable/ic_situation"
+            android:drawableTint="#388E3C"
+            android:onClick="popUpWindowMethod"
+            android:text="Online"
+            android:textColor="#2B2A2A"
+            android:textStyle="bold|italic"
+            tools:layout_editor_absoluteX="357dp" />
+
+
+    </Toolbar>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity=""
+        android:background="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myFeedToolbar"
+        app:tabInlineLabel="true">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/chats_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_chat"
+            android:text="Chats" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/feed_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_feed"
+            android:text="Feed" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/friendListReView"
+        android:elevation="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/teal_200"
+        app:itemIconSize="35dp"
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconTint="#2B2A2A"
+        app:itemTextColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_menu" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

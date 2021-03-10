@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:backgroundTint="#E8E8E8"
+    tools:context=".ProfileActivity">
+
+    <Toolbar
+        android:id="@+id/myToolbar"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:background="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:src="@drawable/m_logo" />
+    </Toolbar>
+
+    <ImageView
+        android:id="@+id/profilePhoto"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myToolbar"
+        android:foreground="@drawable/profile_circle_frame"
+        android:src="@drawable/ic_person"
+
+        android:foregroundTint="@color/gray"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout"
+        app:tint="@color/teal_200" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="379dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profilePhoto">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="379dp"
+                android:layout_height="36dp"
+                android:layout_marginBottom="5dp"
+                android:text="User Profile"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="316dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/light_gray" />
+
+        <LinearLayout
+            android:layout_width="359dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="5dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/namePro"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:contextClickable="false"
+                    android:hint="Name"
+                    android:linksClickable="false"
+                    android:longClickable="false" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="19dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/surnamePro"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:contextClickable="false"
+                    android:hint="Surname"
+                    android:longClickable="false"
+                    android:text="" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="359dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailPro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:contextClickable="false"
+                android:hint="E-mail Address"
+                android:linksClickable="false"
+                android:longClickable="false" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="359dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/joinPro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:contextClickable="false"
+                android:hint="Joined Messenger"
+                android:linksClickable="false"
+                android:longClickable="false" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

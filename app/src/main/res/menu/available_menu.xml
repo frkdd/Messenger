@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Online"
+        android:icon="@drawable/ic_situation"
+        android:iconTint="#388E3C"/>
+
+    <item android:title="Idle"
+        android:icon="@drawable/ic_situation"
+        android:iconTint="#FBC02D"/>
+
+    <item android:title="Offline"
+        android:icon="@drawable/ic_situation"
+        android:iconTint="@color/light_gray"/>
+</menu>

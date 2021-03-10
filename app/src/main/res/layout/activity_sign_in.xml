@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/messenger_teal" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/textInputLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="18dp"
+        android:hint="Username or e-mail"
+        android:inputType="textPersonName"
+        app:startIconDrawable="@drawable/ic_input"
+        app:layout_constraintBottom_toTopOf="@+id/signIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/usernameIn"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/textInputLayout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="1dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        app:endIconMode="password_toggle"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox"
+        app:layout_constraintEnd_toStartOf="@+id/signIn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:startIconContentDescription="Username"
+        app:startIconDrawable="@drawable/ic_input">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="59dp"
+        android:text="Remember me"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/signIn" />
+
+    <Button
+        android:id="@+id/signIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="5dp"
+        android:onClick="signIn"
+        android:text="Sign In"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/teal_700"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textInputLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+
+    <Button
+        android:id="@+id/firstSignUp"
+        android:layout_width="160dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="84dp"
+        android:onClick="signFirstUp"
+        android:text="CREATE ACCOUNT"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/teal_700"
+        android:drawableLeft="@android:drawable/ic_input_add"
+        android:drawableTint="@color/white"
+        app:iconSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OR"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:text="If you have no existing account"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/firstSignUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings" />
+
+    <item
+        android:id="@+id/bottom_add_friend"
+        android:title="Add Friends"
+        android:icon="@drawable/ic_add_person"/>
+
+    <item
+        android:id="@+id/notification_bar"
+        android:title="Notifications"
+        android:icon="@drawable/ic_notification2"/>
+
+    <item
+        android:id="@+id/profile_bar"
+        android:icon="@drawable/ic_account"
+        android:title="Account" />
+</menu>

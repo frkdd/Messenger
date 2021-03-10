@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "627905109704",
+    "project_id": "messenger-b0d28",
+    "storage_bucket": "messenger-b0d28.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627905109704:android:4ecf3e4101acbc77bd8ffd",
+        "android_client_info": {
+          "package_name": "com.dinc.messenger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "627905109704-vhesjqsbrnbmui7cdvkqli2jfcsh6el5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAmJZ3Mg_ILPMor87a9mFGkglm7sVf-X4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "627905109704-vhesjqsbrnbmui7cdvkqli2jfcsh6el5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
